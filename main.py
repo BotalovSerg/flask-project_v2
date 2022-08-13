@@ -9,16 +9,8 @@ app.config.from_object(Config)
 
 @app.route('/', methods=['get', 'post'])
 def index():
-    server_message = ''
-    client_message = ''
-    if request.method == 'POST':
-        client_message = request.form.get('message')
-    if client_message == 'hi':
-        server_message = 'Hello'
-    elif client_message != '':
-        server_message = 'How are you?'
     GameOfLife(25, 25)
-    return render_template('index.html', message=server_message)
+    return render_template('index.html')
 
 
 @app.route('/live')

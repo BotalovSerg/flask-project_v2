@@ -27,7 +27,7 @@ td {
     align-items: center;
 }
 
-a, table {
+body > div > a, table {
     position: absolute;
     top: 50%;
     left: 50%;

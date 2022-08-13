@@ -2,21 +2,10 @@
 
 
 {% block form_user %}
-<form action="" method="post">
-    <p>
-        <label for="message">Message:</label>
-        <input type="text" id="message">
-    </p>
-    <p>
-        <input type="submit">
-    </p>
-
-</form>
-<p>{{ message }}</p>
+<p><a href="{{ url_for('message') }}">Форма</a></p>
 {% endblock %}
 
 {% block app_content %}
-
 <a class="btn btn-primary" href="{{ url_for('live') }}">Создать жизнь</a>
 {% endblock %}
 
